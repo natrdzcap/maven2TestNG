@@ -2,13 +2,9 @@ package selenium1.GoogleSearch;
 
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement; //Agregadas al POM
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
-import org.junit.Test;
+
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
 
 
 
@@ -20,7 +16,7 @@ public class BasicSearch extends AppTest {
  
 
     @Test
-     public void fillTextBox() throws Exception{
+	public void fillTextBox() throws Exception{
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
         page.textbox_search(driver).sendKeys(search);
